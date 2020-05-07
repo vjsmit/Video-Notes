@@ -1,1 +1,17 @@
+Ansible is a configuration mgt tool
+Declarative vs Imperative:
+  - Being declarative means you focus on the what instead of the how. 
+  - An example would be you state that a service should be in a state of running.
+  - Imperative: everything we have to take care
 
+Why Ansible (15:00--)
+Diff bw config mgmt tools (24:45--)
+  - client needed bcoz in pull mechanism, nodes go to cmt to fetch the config. Hence they need agent software to connect
+    but in ansible it uses ssh which is enabled by default.
+  - Changes are not overwritten in Ansible bcoz once its push the confign, it's done. So if any web server crashes or stopped Ansible 
+    will not be aware of it.
+    But it can be overcome by pull approach
+    but in chef/puppet nodes always pulls the confign from them with fixed freqn(default 30 mins). So, every 30 mins they will go to cmt 
+    and pull the confign
+ 
+ 
