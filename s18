@@ -1,10 +1,12 @@
 Ansible is a configuration mgt tool
+
 Declarative vs Imperative:
   - Being declarative means you focus on the what instead of the how. 
   - An example would be you state that a service should be in a state of running.
   - Imperative: everything we have to take care
 
 Why Ansible (15:00--)
+
 Diff bw config mgmt tools (24:45--)
   - client needed bcoz in pull mechanism, nodes go to cmt to fetch the config. Hence they need agent software to connect
     but in ansible it uses ssh which is enabled by default.
@@ -12,6 +14,58 @@ Diff bw config mgmt tools (24:45--)
     will not be aware of it.
     But it can be overcome by pull approach
     but in chef/puppet nodes always pulls the confign from them with fixed freqn(default 30 mins). So, every 30 mins they will go to cmt 
-    and pull the confign
+    and pull the confign.
+    
+ How SSH Works (36:00--45:30)
+ 
+ Ansible Installation (45:32--58:00)
+   - we usually install ansible on Jumpserver
+   - Yum based installaion
+      - $sudo yum list all | grep ansible
+      - $sudo yum install ansible -y
+   - Python based installation (using pip cmd)
+     - ansible is a python module, it uses python in background 
+     - $sudo yum install python2-pip -y
+     - $sudo pip install ansible --upgrade (to get the latest version of ansible)
+     
+   - To check ansible version
+       - $ansible --version
+       
+Ansible Inventory file (59:00--01:13:00)
+  - All nodes info should be inside AIF
+  - Its a plain text file with the list of node
+  - Default group is 'All'
+  - To see the list of host ansible is picking:
+     - $ansible -i hosts all --list-hosts
+  - We can make group of host
+    - e.g. [group_name]
+            node_name1
+            node_name2
+     -$ansible -i hosts group_name --list-hosts
+  - hosts (node) can be part of multiple groups
+  - we can make group of groups as well using keyword Children and inside that we have to give groups detail
+     - [group_name:children]    
+        group1
+        group2
+  - To empty the inventory files:
+     - $>hosts  
+        
+        
+Ansible Ad HOC command (01:16--)
+  -shell is a module to run shell cmd like uptime cmd
+     - $ansible -i hosts all -m shell -a uptime
+     
+  -Disable the fingerprint in ansible or to accept any fingerprint by using a config file or shell variables
+      - $export ANSIBLE_HOST_KEY_CHECKING=False
+      
+  - u <user_name> and using -k to ask for pwd
+  -ansible -i hosts all -u root -k -m shell -a uptime
+  
+    
+    
+    
+       
+   
+   
  
  
