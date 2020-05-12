@@ -9,4 +9,5 @@
     - We can uncomment remote_user = root. So, we can remove -u root also.
     - We can uncomment ask_pass = true. Then no need to give -k option.
     - $ansible -i hosts all -u root -k -m shell -a uptime =======> $ansible all -m shell -a uptime
+(3) YAML(59:00--)
     
