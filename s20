@@ -2,6 +2,24 @@
 (2) Vars (07:00 -- )
 (3) Vars_prompt (18:00)
 (4) How to get variables from files (20:30 --)
+(5) Sometimes we need to pass a variable as an argument i.e. vars from cli (26:00)
+     - from cli we need to pass a variable by using -e option
+         e.g. [centos@ip-172-31-89-11 Ansible1]$ ansible-playbook playbooks/7-vars-from-cli.yml -e URL=cli.google.com
+(6) Putting vars in inventory files (32:00)
+      e.g. [all:vars]
+           URL=group.google.com
+     - best practice is to maintain a file
+         group_files->all.yml
+         
+(7) Default variables (35:00 --)
+      - to give ssh pwd in group_files
+      - ansible_password: (not a good practice)
+      
+(8) register variables (38:00 --)
+     
+           
+ 
+
 
 
 Modules:
