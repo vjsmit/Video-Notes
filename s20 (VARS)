@@ -28,14 +28,31 @@
           - it connect to the node and gather all it's system  information as a variables 
           - e.g. ansible_machine:
           - gather_facts: no ====> then it will not gather facts about the node, By default it is set to yes
-           
+          
+ (11) Ansible facts (53:00 -- )
+        - on remote node we have to create directory /etc/ansible/facts.d.
+        - inside that directory, we have to place one or more fact fies in jason format
+               - :w !sudo tee % > /dev/null (to save the file inside above directory as sudo user) 
+        - ansible_local is the variable      
+        - so, we can keep the information about the node inside the node also
+         
+ 
+(12) Variable Precedence (59:00)
+        ## 1. Variables from CLI are the the utmost priority variables 
+        ## 2. Task variables pick the next priorty 
+        ## 3. Play variables , vars, vars_file , vars_prompt 
+        ## 4. Host variables in inventory 
+        ## 5. Group variables in inventory 
+
+  
+        
  Modules:
  (1) To print
      debug:
        msg:
  (2) Variable
        vars:
-         var_name:
+         var_name: variable
     
  (3) To ask i/p from user
         vars_prompt:
