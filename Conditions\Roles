@@ -1,0 +1,37 @@
+(1) When conditions (01:00 -- 09:10)
+        e.g. when: ansible_distribution == "CentOS"
+        
+(2) Ignore Errors (09:30 --)
+      => ignore_errors: yes
+      => Even if there is a failure, ansible will not stop there. It will take us further
+      => rc is like exit status. If 0, then successful or else failure
+      
+ (3) Tags (13:30 --18:00)
+       - when we want to run the specific tasks and not all the tasks
+       - tags is grouping of tasks
+       => tags:
+           - one
+       - on cli we have to use -t option followed by tags
+  
+ (4) Loops (18:30 -- 32:30)
+       - when same task needs to excecuted mutiple times
+       - msg: "Hello, {{item}}"
+         loop:
+           - raju
+           - kaju
+           - baju
+        - msg: "Hello {{item}}"
+          loop:
+           ["One", "Two"]
+           ["New", "Old"]  
+           
+        - msg: "Hello {{item[0]}} & Hello {{item[1]}}"
+          loop:
+            ["one" "two"]
+            ["Ram" "Shyam"]
+            
+(5) Filters (33:00 -- 49:00 )
+      - $ uptime | xargs -n1 (to view uptime o/p  column wise)
+      - .split() function we use in ansible for getting list view. e.g. {{out.stdout.split()}}
+       
+(6) Email service (50:00 --)
