@@ -1,7 +1,7 @@
 (1) DNS Entry/DNS name (--33:00)
 (2) Changing some default ansible config (34:00 - )
-    - Default ansible config is available in /etc/ansible/ansible.cfg (we can copy it to current location using cp /etc/ansible/ansible.cfg)
-    - Ansible always first looks for config file if it's not there then it will use the cental one
+    - Default ansible config is available in /etc/ansible/ansible.cfg (we can copy it to current location using cp /etc/ansible/ansible.cfg .)
+    - Ansible always first looks for config file locally if it's not there then it will use the cental one
     - To check config file location
         - $ansible --version
     - We can enable host_key_checking as false in order to disable fingerprint checking. (earlier we were usimg export variable)
