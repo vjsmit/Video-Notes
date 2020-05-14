@@ -4,7 +4,7 @@
 (4) How to get variables from files (20:30 --)
 (5) Sometimes we need to pass a variable as an argument i.e. vars from cli (26:00)
      - from cli we need to pass a variable by using -e option
-         e.g. [centos@ip-172-31-89-11 Ansible1]$ ansible-playbook playbooks/7-vars-from-cli.yml -e URL=cli.google.com
+         e.g. $ ansible-playbook playbooks/7-vars-from-cli.yml -e URL=cli.google.com
 (6) Putting vars in inventory files (32:00)
       e.g. [all:vars]
            URL=group.google.com
@@ -13,16 +13,23 @@
          
 (7) Default variables (35:00 --)
       - to give ssh pwd in group_files
-      - ansible_password: (not a good practice)
+      - ansible_password: (not a good practice to )
       
 (8) register variables (38:00 --)
-     
+         - to register a variable from o/p of one task and storing that output in a variable
+         - register: var_name
+         
+(9) Define a variable in a task (45:00 --)
+       set_fact:
+         var_name: "{{}}"
+         
+(10) Task [Gathering Facts]  (47:00 --)
+       - setup module
+          - it connect to the node and gather all it's system  information as a variables 
+          - e.g. ansible_machine:
+          - gather_facts: no ====> then it will not gather facts about the node, By default it is set to yes
            
- 
-
-
-
-Modules:
+ Modules:
  (1) To print
      debug:
        msg:
@@ -39,4 +46,9 @@ Modules:
  (4) Variable from files
         vars_files:
           - file location
-          
+   
+ (5) Define variable in a task
+        set_fact:
+        var_name: "{{}}"
+        
+  (6) Setup
