@@ -30,7 +30,10 @@
   - Jenkins (50:00)
      - jekins server should have ansible installed. 
      - shell script to install jenkins (54:00)
-
+     
+  - become: yes (it give sudo privilege)
+  - ansible color variable (01:24:00)
 
     Doubts
     (46:00) why ansible_distribution is only giving Ubuntu  
+    () Not getting devops.pem file in stack-setup-ansible1
