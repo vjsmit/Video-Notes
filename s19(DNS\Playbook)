@@ -10,4 +10,16 @@
     - We can uncomment ask_pass = true. Then no need to give -k option.
     - $ansible -i hosts all -u root -k -m shell -a uptime =======> $ansible all -m shell -a uptime
 (3) YAML(59:00--)
+
+Modules:
+ #To install webserver
+   package:
+     name: <name of package to be installed>
+     state: present
+ 
+ #To start webserver
+   service:
+     name: <name of service to be started>
+     state: started
+    
     
