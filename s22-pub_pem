@@ -1,0 +1,36 @@
+(1) Privare key (06:00 --)
+      - .pem file/ .pub file
+      - .pub file we keep in amazon or we can upload it directly on server
+      - one key pair is enough for one user.
+      - Generate keypair:
+         $ ssh-keygen -f devops
+           - it will generate two files (1)devops.pub (2)devops
+           - devops files we rename to devops.pem by $ mv devops devops.pem
+           - usually we need to load this file with putty and covert the file to PPK in order to connect server with putty
+      - connecting ubuntu server from git bash
+         $ ssh -i devops.pem -l ubuntu <ip address>
+         
+      - connect to putty using key (25:20 -- )
+         - open putty gen--->load our pem file--->save private key as ppk file
+         - Now we open putty and in ssh-->auth we upload pem file
+         
+      - uploading the key manually to already running servers (28:00 -- )
+         - earlier pub key was given to server by aws in /.ssh/authorized_keys
+         - we have to go in .ssh file and cat authorised_keys. We have to add our pub key using vim editor
+         
+     - We have to connect to nodes from our workstation
+        - so we have to upload .pem file in our ws
+        - vi devops.pem and paste the .pem file here. This file shouldnt have permission more than 600 (i.e only rw)
+        - now we can connect to the node from ws using $ ssh -i devops.pem -l centos <ip addr>
+        
+     - we shouldnt keep our devops.pem file in repository
+     
+  - roles continued (43:30)
+  - Installing WebServer & AppServer (47:00 -- )
+  - Jenkins (50:00)
+     - jekins server should have ansible installed. 
+     - shell script to install jenkins (54:00)
+
+
+    Doubts
+    (46:00) why ansible_distribution is only giving Ubuntu  
