@@ -32,6 +32,12 @@
                 name: httpd
                 state: restarted
   (3) Intallation of App server (19:00-40:00)
+      - download java
+      - create application user by creating vars in appserver
+      - user module-
+           user:
+             name: 
+           
       - Unarchive module: this module can download the file and extract also. 
                         : the option needs to be specify is remote_src: yes
                         : unarchive:
@@ -47,11 +53,15 @@
                                   : These variables will have the lowest priority of any variables available,
                                     and can be easily overridden by any other variable, including inventory variables.
   
-  (6) Lineinfile ansible (52:46): 
+  (6) Lineinfile ansible (52:46): When we want to add single line to the file
   
-  (7) get_url module (54:00): to change the permission of while while downloading using mode:.
+  (7) get_url module (54:00): to change the permission of while while downloading using mode. Using mode: ''
   
   (8) pre_reqs (01:01:00 - 01:14:00): sestatus to check SELinux status    
   
   (9)Ubuntu (01:15:00):
+  
+  Doubt:
+  TOMCAT_VERSION in jenkins (30:00)
+  Unable to download tomcat in jenkins   
   
