@@ -1,4 +1,22 @@
 (1) web server config on centos.yml
+     - copying proxy config using copy module. WebServer should have folder files. Inside that we keep proxy.conf
+         - copy:
+             src: proxy.conf
+             dest: /etc/httpd/conf.d/proxy.conf
+         - url:
+             get_url:
+             url:
+             dest:
+         
+         - service start
+               service:
+                 name:
+                 state: started
+                 enabled: yes
+    # config change will always need a restart 
+           
+             
+        
 (2) Handlers (09:00-17:30)
    What is Handler?
     ----Handlers are just like regular tasks in an Ansible playbook but are only run if the Task contains a notify directive
