@@ -32,8 +32,10 @@
      - shell script to install jenkins (54:00)
      
   - become: yes (it give sudo privilege)
-  - ansible color variable (01:24:00)
+  - ansible color environment variable (01:24:00)
+    - export ANSIBLE_FORCE_COLOR=true
+  
 
     Doubts
     (46:00) why ansible_distribution is only giving Ubuntu  
-    (01:17:00) Not getting devops.pem file in stack-setup-ansible1
+    ##(01:17:00) Not getting devops.pem file in stack-setup-ansible1
