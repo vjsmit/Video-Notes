@@ -1,4 +1,16 @@
-Ansible pull
-Ansible AWX
-Monitoring of nodes
-  Newrelic
+=>Ansible pull
+  - node will pull config from ansible
+  - need to install ansible and git package on node using $ sudo yum install ansible git -y
+  - we have to use https link for pull from git
+  - we have to use -U option to give URL of git   (URL of the playbook repository)
+  - ansible-pull -U <URL>
+    - It will look for playbook to run in intenal.yml file then local
+  - Ansible pull has to be in git repository 
+     
+=>Ansible Tower - Its a UI 
+
+=>Monitoring of nodes
+  - Newrelic
+  
+  Doubt:
+  Newrelic configuration
