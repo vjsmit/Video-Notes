@@ -1,0 +1,6 @@
+newrelic is a role
+How to encrypt content in Ansible (05:00 -- )
+ - using ansible-vault encrpt_string
+ - then we have to give pwd
+
+lineinfile (08:00 --)
