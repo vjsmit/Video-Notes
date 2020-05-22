@@ -1,0 +1,16 @@
+Log aggregation tools
+(1) Splunk
+(2) ELK- Elastic/Logstash/Kibana
+
+Kibana- It's UI to see the logs on the web-browser
+Elastic Search - it's a database
+               - we usually dump our logs in db 
+Logstash - to convert logs into structured format
+Filebeat (16:00 -- ) - Servers will push the logs to logstash using filebeat, It's agent sw on the server.  
+Installation of elastic search ( -- 38:00)
+Install Kibana (40:30 -- )
+Installation of beats on webserver (01:00:00)
+
+
+               
+  
