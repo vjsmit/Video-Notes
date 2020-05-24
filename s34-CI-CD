@@ -1,0 +1,14 @@
+Continous Integration:
+  - continuous integration is the practice of merging all developers' working copies to a shared mainline several times a day.
+  
+Continous Deployment  
+
+Branch and strategies:
+(1) All code going to master branch
+(2) Feature branch: If we want to release a feature we will will create one branch for that. Then it goes to master
+(3) Sprint branching: every sprint we will create one branch. At the end of the sprint it goes to master.
+(4) Story based branching: For every story we will have one branch. At end of story we can merged it into where ever we want to
+
+In jira we will have epics--->stories--->tasks
+Group of stories can go for epic
+Installation of git on server ()
