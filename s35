@@ -1,1 +1,46 @@
 git command over cli (-- 20:00)
+
+Cloning a repository:
+ - git clone <URL> 
+ 
+To see the files which has been not tracked or commit
+ - git status
+ 
+To add file to commit
+ - git add <file_name>
+ - git add -A (to commit all the files)
+ 
+While commit we have to give some msg
+ - git commit -m 'Type your msg here'
+ 
+to push the changes to default branch master. And if already in master no need to mention it
+ - git push origin master
+ 
+ 
+ When we have to create our own branch:
+ 
+ To see all the branches:
+  - git branch -a
+  
+To create branch
+ - git branch <branch_name>
+ 
+All the commit can be checked using:
+ - git log
+ 
+Whichever commit we are in it will try to use that commit code and from that point it will try to create a branch
+
+To go back from one commit to other
+ - git checkout <commit id>  (evey commit has commit id)
+ 
+Merge the code in master
+ - git merge ansible
+ 
+===================================================================================================
+Three types of project in java
+(1) Ant - if it is build.xml then it's an ant project
+(2) Maven - if it is pom.xml then it's a maven project
+(3) Gradle - if it is build.gradle then it's a gradle project
+
+Maven ()
+Gradle (47:00 -- )
