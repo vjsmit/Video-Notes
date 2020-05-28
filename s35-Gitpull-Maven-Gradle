@@ -42,5 +42,23 @@ Three types of project in java
 (2) Maven - if it is pom.xml then it's a maven project
 (3) Gradle - if it is build.gradle then it's a gradle project
 
-Maven ()
-Gradle (47:00 -- )
+Maven Project (31:00 -- )
+ - maven cmd is mvn
+ - PATH is a variable which tells which path system look for executables 
+   - echo $PATH
+ - mvn clean compile package (to make jar file)
+Gradle (47:00 -- 57:00)
+compile code in git (58:00 -- )
+ - Push an existing folder
+   - cd existing folder
+   - git init (it will create that directory as a git repo)
+   - git remote add origin <>
+   - git add
+   - git commit -m 'comment'
+   - git push -u origin master
+
+Jenkins (01:07:00 -- )
+ - monitoring of git repository
+
+Doubt:
+ (58:00---01:06:00)
