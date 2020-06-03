@@ -46,7 +46,7 @@ Maven Project (31:00 -- )
  - maven cmd is mvn
  - PATH is a variable which tells which path system look for executables 
    - echo $PATH
- - mvn clean compile package (to make jar file)
+ - mvn compile package (to make jar file)
 Gradle (47:00 -- 57:00)
 compile code in git (58:00 -- )
  - Push an existing folder
