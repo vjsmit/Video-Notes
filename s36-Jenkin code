@@ -1,0 +1,9 @@
+Running jenkins job as code
+ - can be written in 2 ways
+    - Jenkin DSL
+    - groovy
+ pipeline code in DSL
+ jenkins pipeline dsl
+  - pipeline script from SCM
+  
+ 
