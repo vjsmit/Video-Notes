@@ -4,6 +4,6 @@ Running jenkins job as code
     - groovy
  pipeline code in DSL
  jenkins pipeline dsl
-  - pipeline script from SCM
+  - pipeline script from SCM (we need to create git repo and keeping the jobs inside that)
   
  
