@@ -5,5 +5,19 @@ Running jenkins job as code
  pipeline code in DSL
  jenkins pipeline dsl
   - pipeline script from SCM (we need to create git repo and keeping the jobs inside that)
+To create a job with the code
+  - jenkin seed jobs: seed job is a Jenkins job which runs a DSL scripts, and then generates a new job
   
+# Whenever we create a jenkins instance, we need to have a seed job created and run it. 
+  All the jobs whichever are there we get it as per our requirement
+  
+ # Through the code we added the job and if we remove the code and that job will not be removed
+    Action for removed jobs is by deafault: ignore 
+     we can set it to delete
+     
+     
+Restart jenkins (32:00 -- ) 
+Jenkins seed dsl 
+Createing a pipeline job
+
  
