@@ -2,7 +2,7 @@ Running jenkins job as code
  - can be written in 2 ways
     - Jenkin DSL
     - groovy
- pipeline code in DSL
+ pipeline code in DSL (05:00 -- )
  jenkins pipeline dsl
   - pipeline script from SCM (we need to create git repo and keeping the jobs inside that)
 To create a job with the code
