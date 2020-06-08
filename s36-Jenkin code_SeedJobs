@@ -8,6 +8,9 @@ Running jenkins job as code
 To create a job with the code
   - jenkin seed jobs: seed job is a Jenkins job which runs a DSL scripts, and then generates a new job
   
+# In-process script approval (25:00)
+   - Allows jenkinsadmin to  review proposed scripts (e.g. written in groovy) which run inside jenkin process
+  
 # Whenever we create a jenkins instance, we need to have a seed job created and run it. 
   All the jobs whichever are there we get it as per our requirement
   
@@ -15,9 +18,10 @@ To create a job with the code
     Action for removed jobs is by deafault: ignore 
      we can set it to delete
      
-     
 Restart jenkins (32:00 -- ) 
 Jenkins seed dsl 
 Creating a pipeline job
 
- 
+Pluggins: It adds some functionality
+- Seed Jenkins
+- Authorize Project
