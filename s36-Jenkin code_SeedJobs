@@ -20,8 +20,13 @@ To create a job with the code
      
 Restart jenkins (32:00 -- ) 
 Jenkins seed dsl (37:00 -- )
+  - Type of job we want to create e.g. pipeline job
 Creating a pipeline job
 
 Pluggins: It adds some functionality
 - Seed Jenkins
 - Authorize Project
+
+Doubts:
+After 38:00
+Seed job maker
