@@ -1,0 +1,18 @@
+Docker is to run the container from the images.
+All the images are pre-defined and available at hub.docker.com
+Installing a container:
+  from docs.docker.com
+$ docker ps - It will show all the docker running comtainers
+ps cmd - It will show the running process
+If we want to run some service on container, we have to provide image
+  $ docker run -d httpd
+   - Here, we are running httpd. -d option to run in background
+   
+ Every, container will have internal ip add bcoz its like a virtual machine
+ $ docker inspect <container id>
+ $ curl ipconfig.co - to get the public ip add of the machine
+ $ docker run -p 80:80 httpd
+ 80 port is open for container and not for the machine. So, whatever container we run we have to expose to the outside world
+ -p otion is to publish the port, 80 port of my host machine to my container port 80. Its like mapping host port no. to my container port no.
+ 
+ 
