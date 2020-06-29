@@ -28,5 +28,6 @@ If we want to run some service on container, we have to provide image
  Jenkins admin user create groovy (19:00 - )
  
  How to make our own immages using docker file (20:00 -- )
-  - In order to make any of the image, we have to choose a base image.
+  - In order to make any of the image, we have to choose a base image
+  - $ docker build -t username
  
