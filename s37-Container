@@ -45,3 +45,4 @@ If we want to run some service on container, we have to provide image
     -  $ docker run -d -p 80:8080 -e admin_user=admin -e admin_pwd=admin user_name/image_name:image
   
  
+Plugins (53:00)
