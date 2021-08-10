@@ -1,0 +1,18 @@
+file type 
+1. ordinary file: Data, text, Program instruction
+2. special file: All devices we genrally have in linux os, either its directly attached device or plug and play device all these are considered as file in linux os
+                 All stored in /dev dir.
+                 Files provide access to hw such as hard drives, CD-ROM drives, modems and ethernet adapters
+3. directories: Store both ordinary and special files
+
+
+command :
+pwd - present working directories
+
+ls - list of all files
+
+flag for ls :
+ls -l  : long list 
+permission | memoery block | user |  group | memory of file in byte | date nd time | file name 
+ll : long list 
+ls -a : hidden file list
