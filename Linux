@@ -16,3 +16,73 @@ ls -l  : long list
 permission | memoery block | user |  group | memory of file in byte | date nd time | file name 
 ll : long list 
 ls -a : hidden file list
+
+Create a file:
+(1) cat>file_name : To create a file and add content in it.
+                  : To save the file ctrl+d
+(2) toch file_name : To create an empty file
+
+Copy/Move/Rename the file:
+
+mv: can be used to rename or move(cut-paste) files in same or diff location.
+  : It cuts the file and paste it in same/another location with diff name.
+  
+cp: to copy file in same or another location.
+
+
+Check content in the file:
+cat- To check content
+wc- To count word/letters in a file
+ -c, --bytes            print the byte counts
+ -m, --chars            print the character counts
+ -l, --lines            print the newline counts
+     --files0-from=F    read input from the files specified by
+                           NUL-terminated names in file F;
+                           If F is - then read names from standard input
+ -L, --max-line-length  print the length of the longest line
+ -w, --words            print the word counts
+     --help     display this help and exit
+     --version  output version information and exit
+
+wc -c <file_name>
+
+
+Delete the file:
+
+rm <file_name>
+rm <file1> <file2> <file3>
+rm * (To delete all the file)
+Syntax: rm file-name
+• Example: rm sample
+• Some times it may ask for a prompt (yes/no) to remove the files
+which may require to parse –f option to not prompt it.
+
+
+Linux in-built Files:
+
+1> stdin - This is std file which takes the i/p.
+2> stdout - For giving the o/p
+3> stderr - This file is called when there is error
+
+Directory commands:
+cd for change directory
+mkdir: to create a directory
+ls –la : get detail info with hidden files/dir
+dot(.) – current working directory
+double dot (..) – Level above (immediate parent directory)
+dot & double dot by default gets created when we create a directory
+To make a dir with a space in bw:  
+e.g. imp data, we use ‘\’ bw two word and a space.  
+If we don’t give ‘\’ the it will create 2 diff directory.
+To copy dir we use -r:
+Cp –r <Dir1> <Dir2>
+
+To delete dir:
+rm –r <dir_name>
+
+We can get the help of any command by using man pages.
+
+
+
+
+ 
