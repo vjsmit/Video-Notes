@@ -78,11 +78,34 @@ To copy dir we use -r:
 Cp –r <Dir1> <Dir2>
 
 To delete dir:
-rm –r <dir_name>
+rm –r <dir_name>  (to skip y/n, use -f option. e.g. rm -rf <dir_name>)
+rmdir <file name> (To delete empty dir)
 
 We can get the help of any command by using man pages.
 
 
+to create directories one in another:
+mkdir -p sample/one/two/three
 
+Here, we are creating sample dir, inside that one dir, inside that one dir, inside that two dir, inside that three dir
+
+
+cat -n <file_name>  --to print the file content with line#
+head <file_name>    --to print top 10 lines
+head -n 5 <file_name> --to print top 5 lines
+tail <file_name>     -- to print last 10 lines
+tail -n 5 <file_name> -- to print last 5 lines
+tail -f <file_name>  -- to see the logs. -f is for follow up
+
+grep cmd:
+to print the lines which have that oarticular word.
+
+grep word <file_name>  
+
+It will print only the lines which have particular word
+
+column based filtering: awk cmd
+awk -F 'Delimiter' '{print $column-no.}' <file_name>
+awk -F : '{print $NF}' passwd
 
  
