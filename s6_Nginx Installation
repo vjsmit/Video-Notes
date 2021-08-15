@@ -1,0 +1,15 @@
+3 types of installaion:
+
+rpm based --- yum cmd
+src based ----wget cmd
+download and use
+
+for src based installation:
+1) ./configure script
+2) make --take care of compiling
+    echo $?
+3) make install
+
+/usr/local/nginx/sbin
+
+./nginx to start nginx
