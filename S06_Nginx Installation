@@ -2,7 +2,7 @@
 
 rpm based --- yum cmd
 src based ----wget cmd
-download and use
+stand alone --download and use
 
 for src based installation:
 1) ./configure script
