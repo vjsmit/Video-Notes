@@ -13,3 +13,49 @@ for src based installation:
 /usr/local/nginx/sbin
 
 ./nginx to start nginx
+
+=========================================================================================================================
+Install Nginx from Source.
+$ wget http://nginx.org/download/nginx-1.16.0.tar.gz
+$ tar -xf nginx-1.16.0.tar.gz
+$ cd nginx-1.16.0
+$ sudo yum install gcc pcre-devel zlib-devel -y 
+$ ./configure
+$ sudo make 
+$ sudo make install
+
+The above commands will install nginx in /usr/local/nginx directory.
+
+
+IN case if your requirement needs to be installed in saperate location lets say /opt/nginx
+$ ./configure --prefix=/opt/nginx
+
+Now we can start the server using following command
+$ sudo /usr/local/nginx/sbin/nginx
+
+We can stop the server using
+$ sudo /usr/local/nginx/sbin/nginx -s stop
+
+To reload (When config changes are made usually we need a reload of service)
+$ sudo /usr/local/nginx/sbin/nginx -s reload
+
+
+
+
+[ centos@ip-172-31-37-78 ~/nginx-1.20.1 ]$ sudo /usr/local/nginx/sbin/nginx -help
+nginx version: nginx/1.20.1
+Usage: nginx [-?hvVtTq] [-s signal] [-p prefix]
+             [-e filename] [-c filename] [-g directives]
+
+Options:
+  -?,-h         : this help
+  -v            : show version and exit
+  -V            : show version and configure options then exit
+  -t            : test configuration and exit
+  -T            : test configuration, dump it and exit
+  -q            : suppress non-error messages during configuration testing
+  -s signal     : send signal to a master process: stop, quit, reopen, reload
+  -p prefix     : set prefix path (default: /usr/local/nginx/)
+  -e filename   : set error log file (default: logs/error.log)
+  -c filename   : set configuration file (default: conf/nginx.conf)
+  -g directives : set global directives out of configuration file
