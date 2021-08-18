@@ -24,9 +24,11 @@ server {
 }
 After adding server block need to restart the service.
 
-To server another website from nginx server(Reverse Proxy):
+To serve another website from nginx server(Reverse Proxy):
 
 Need to add in /usr/local/nginx/conf/nginx.conf:
+
+under http add below
 
 server {
         listen       80;
