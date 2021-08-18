@@ -1,0 +1,61 @@
+Purpose of Web Server:
+
+1) To serve static content
+2) Serves as a Gateway
+3) Works as LB
+4) WebHosting: Inside WS we can host multiple websites (Name based virtual hosting)
+5) Reverse Proxy: Application is never exposed to outside world
+
+What happens when we hit google.com:
+
+1) What is ip add of url.
+2) First it looks in local host file.
+3) Second, it asks for DNS server.
+
+
+Need to add server block for name based virtual hosting in the location /usr/local/nginx/conf/nginx.conf:
+server {  
+    listen       80;  
+    server_name  app1.example.com;
+    access_log  logs/app1-access.log;  
+    error_log   logs/app1-error.log error; 
+        root   html/app1;  
+        index  index.html;  
+}
+After adding server block need to restart the service.
+
+To server another website from nginx server(Reverse Proxy):
+
+Need to add in /usr/local/nginx/conf/nginx.conf:
+
+server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+	    proxy_pass http://localhost:8888/;
+}
+
+Nginx as LB:
+Need to add in /usr/local/nginx/conf/nginx.conf:
+
+http {
+    upstream myapp1 {
+        server srv1.example.com;
+        server srv2.example.com;
+        server srv3.example.com;
+    }
+
+    server {
+        listen 80;
+
+        location / {
+            proxy_pass http://myapp1;
+        }
+    }
+}
+
+
+
+
+
