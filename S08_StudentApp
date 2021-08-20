@@ -1,0 +1,3 @@
+50:00 - Diff bw webserver(httpd) & Tomcat server(App server)
+
+01:07:20 - Why we need web server when Tomcat can also serve the static content
