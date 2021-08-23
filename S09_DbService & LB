@@ -1,0 +1,16 @@
+Replacing db server with db service provided by AWS.
+
+RDS: It provide nosql db as a service
+
+Using Web and App on single server.
+
+LB: To balance the load bw servers
+    using nginx as LB
+    Using AWS LB service
+    
+    
+ Services we should use a normal user not as a root user
+ 
+15:00  We have to start webservice as a root user
+       To open port#80, it uses root user service
+       Any port bw 0 -1023 ports can only be opened by root user. Other user cant open these port no. (maybe due to security perspective) 
