@@ -14,3 +14,13 @@ LB: To balance the load bw servers
 15:00  We have to start webservice as a root user
        To open port#80, it uses root user service
        Any port bw 0 -1023 ports can only be opened by root user. Other user cant open these port no. (maybe due to security perspective) 
+       
+       
+Classic LB
+Application LB
+
+Enhancement on Developer's idea:
+1) USe LB
+2) Use web and app om 1 server
+3) RDS
+
