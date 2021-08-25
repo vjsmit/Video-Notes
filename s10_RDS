@@ -1,1 +1,4 @@
+10:00 - free tier DB setup
 
+22:00- Connect to DB from client
+[ root@ip-172-31-32-39 ~ ]# mysql -h database-1.crfyxhdrotp7.us-east-1.rds.amazonaws.com -uadmin -ppassword
