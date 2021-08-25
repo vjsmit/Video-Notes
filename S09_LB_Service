@@ -22,5 +22,6 @@ Application LB
 Enhancement on Developer's idea:
 1) USe LB
 2) Use web and app om 1 server
-3) RDS
+3) Tomcat startup scripts with systemctl
+4) RDS
 
