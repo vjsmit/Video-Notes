@@ -19,7 +19,63 @@ Topics
     b. for
 10. sed 
 
+She-Bang (07:00 - 17:00)
 
+#! has to be in the very first line.
+If she-bang(#!) is in second line or any where else then it is treated as a comment.
+Usually it is a best practice to start a script with She-Bang.
+
+Comments
+
+Any line starting with # character is treated a Comment.
+Generally comments are ignored by your interpreter.
+Usually comments are used to make a comment for future reference for self or others as well.
+
+# or #### (n#) is also treated as comment.
+
+
+Permission (18:30 - 30:00)
+
+Every file has owner and group owner
+chown/chgrp : to change owner of the group
+        $ sudo chown root <file_name>   #Now, the file is owned by root user
+        $ sudo chgrp root <file_name>   #Now, group owner is changed to root
+        $ sudo chown root:root <file_name> #Now, both group and file owner changed to root
+        
+        
+-rw-r--r-- 1 root root 25 Aug 27 05:38 1.sh
+ We have 3 blocks here:
+ 
+ rw- : owner(u)
+ r-- : group owner (g)
+ r-- : others (o)
+ 
+ r - read
+ w - write
+ x - execute
+ 
+ Here, owner can read and write.
+       All other users inside this group can read only.
+       Others have also read only access
+
+To change permissions, we use chmod and +/- :
+
+If we are owner of file we can change its permission and if we are not owner we need root permission to change the permissions.
+
+chmod u+x <file_name>  #It will give user executable permissions
+chmod u-x <file_name>  #It will remove user executable permissions
+chmod ugo+rwx <file_name> #It will give read,write,executable permissions to all owner/ group and others.
+
+.  = present directory
+./ = In this directory
+
+./<file_name>  #To execute the file
+
+If we are damn sure that its shell script file, then,
+sh <file_name.sh>
+
+Permission applied to directory(40:30)
+we can use same chmod/chmod with -R
 
 
 
