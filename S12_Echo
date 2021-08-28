@@ -1,0 +1,11 @@
+Git Cloning (10:00 - )
+
+$ git clone <https://user_name:password@url>
+
+
+Pull (14:00-)
+
+When I modify code in our local system and then push the changes using sourcetree to central repo(e.g. github). 
+But we already cloned the server and server will not be aware of any modification. So, form server side we have to pull changes from central repo.
+---->git pull --all
+
