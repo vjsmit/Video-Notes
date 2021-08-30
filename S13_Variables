@@ -56,4 +56,52 @@ echo "Today date is $DATE"
 ADD=$((2+3))
 echo "ADD of 2 and 3 = $ADD" 
 
+===========================================================================================================
+Read Input:
 
+#!/bin/bash 
+
+## Take input from user and store inside a variable 
+read -p 'Enter Your Name: ' name 
+read -p 'Enter your Course: ' course 
+
+## Some times we need to read some secret content like passwords 
+read -s -p 'Enter  your Password: ' pass
+
+## I am going to print those variables 
+
+echo -e "\n\nHello $name, Welcome to $course Training, Your Password is $pass"
+
+## Read command will not allow a scope of automation, Means it is going to read the input from the user manually, 
+In case of automation a user cannot be giving those inputs and your script will be a failure.
+Hence we prefer the inputs using special variable more and more for automation , but not read command.
+
+=============================================================================================================
+Special-vars
+
+### Special variables are $0. $1, $2 .... $n, $*, $@. $# , $$ $?
+
+## What is $0 , $0 is nothing but the script name.. Inside script if you want to know the script name you are using then $0 can help
+
+echo Script Name = $0 
+
+## What is $1 , First argument to the script is $1
+echo First Argument to script is $1 
+
+## What is $* & $&, All arguments parsed to the script 
+
+echo All arguments = $* 
+echo All arguments = $@ 
+
+
+## What is $# , Number of arguments parsed to script 
+echo Number of Arguments = $#
+
+
+echo "Hello $1 , Welcome to $2 Training , Your Password is $3"
+
+===========================================================
+Redirectors:
+
+for o/p: >    # ls >/tmp/out     Here, o/p of ls command will be stored in location /tmp/out
+for i/p: <    #sudo mysql -t </tmp/sql   Here, input will be provided by /tmp/sql location
