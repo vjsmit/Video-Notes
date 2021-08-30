@@ -105,3 +105,14 @@ Redirectors:
 
 for o/p: >    # ls >/tmp/out     Here, o/p of ls command will be stored in location /tmp/out
 for i/p: <    #sudo mysql -t </tmp/sql   Here, input will be provided by /tmp/sql location
+
+========================================================
+Jenkins Installation:
+
+$ sudo yum install java -y 
+$ sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+$ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+$ sudo yum install jenkins -y 
+$ sudo systemctl enable jenkins 
+$ sudo systemctl start jenkins
+
