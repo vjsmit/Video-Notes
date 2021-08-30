@@ -1,1 +1,59 @@
+#!/bin/bash 
+
+### If you assign a name to data then that is called as variable 
+
+## VARNAME=DATA
+
+Count=10
+Class=DevOps
+
+## Following are the characters allowed in variable names.
+# 1. character a-z, A-Z 
+# 2. 0-9 numbers 
+# 3. Underscore is also allowed 
+
+### None of any other character are not allowed to keep in a script like . - ? 
+### Also a variable should not start with a number 
+
+## Access a variable data by using variable name preceding with $ character. Also you can access variable with flower brackets as well , ${VARNAME}
+
+echo "Welcome to $Class Training and Strength is $Count"
+echo "Welcoem to ${Class} Training and Strength is ${Count}"
+
+## Properties of a variable 
+# 1. ReadWrite  --> ReadOnly  <- We are not discussing
+# 2. Local      --> Environment 
+# 3. Scalar     --> Arrays <- We are not discussing
+
+
+## Demo on Local variables 
+## Declare a variable on shell and try to access that variable in script 
+## On Shell CLASS=DEVOPS
+## Now to convert the above variable to environment variable then we have to use export command.
+## export CLASS=DEVOPS
+
+echo "Welcome to $CLASS TRAINING"
+
+### Sometimes we need to declare variables during runtime 
+## FOr ex some statements can go wrong if we declare variable directly in script 
+
+echo "Today date is 2019-08-12"
+
+## We need to get that date dynamically from script 
+## For that situations we have variable substitutions
+
+# 1. Command Substitution 
+    ## Variable will be declared by executing a command and O/P goes to a variable 
+    ## VAR=$(COMMAND)
+# 2. Arithematic Substitution
+    ## Variable will be declared by solving a arithematic expression.
+    ## VAR=$((ARTH-EXPRESSION))
+
+
+DATE=$(date +%F)
+echo "Today date is $DATE"
+
+ADD=$((2+3))
+echo "ADD of 2 and 3 = $ADD" 
+
 
