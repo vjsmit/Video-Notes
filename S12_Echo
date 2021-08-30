@@ -9,3 +9,54 @@ When I modify code in our local system and then push the changes using sourcetre
 But we already cloned the server and server will not be aware of any modification. So, form server side we have to pull changes from central repo.
 ---->git pull --all
 
+#!/bin/bash 
+
+## Printing in shell can be done with two commands 
+## 1. echo  (recommend)
+## 2. printf (dont recommend because it needs lot of syntax where as echo is easier)
+
+echo Hello World 
+
+## How to print multiple line with echo command 
+echo Hello from Line1 
+echo Hello from Line2 
+
+### Instead of having multiple commands we can use a single echo command to print multiple lines 
+### \n -> To print new line in echo command we use \n
+
+
+### echo command escape sequences like \n are enabled in echo command if we use an option which is -e 
+
+echo -e "Hello from Line1\nHello from Line2"
+
+### \t -> To Print tab spaces 
+
+echo -e "1.\tAnjani\t\tDevOps\n2.\tAnoop\t\tDevOps"
+
+### Printing colors using \e 
+### echo -e "\e[COLmWORD"
+
+### Color Codes 
+
+# Color         Foreground          Background
+# Red           31                  41
+# Green         32                  42
+# Yellow        33                  43
+# Blue          34                  44  
+# Magenta       35                  45
+# Cyan          36                  46
+
+
+echo -e "\e[33myellow foreground color\e[0m"
+## Usually colors follows with next lines as well, when you enable a color and it is also our responsibiliy to disable the color 
+## \e[0m  -> 0 color code can disable the color
+echo "No color required for this statement"
+
+## Print both foreground and background colors 
+# echo -e "\e[BGCOL;FGCOLmWord"
+echo -e "\e[43;31mRed on yellow\e[0m"
+
+1 is used for bold char
+
+echo -e "\e[1;43;31mRed on yellow\e[0m"
+
