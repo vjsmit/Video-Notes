@@ -68,4 +68,25 @@ echo -e Hello\\nWorld
 ## Even in double quotes sometimes you need to skip the speciality of chaaracters 
 echo  "Cost of apple is \$100"
 
+==========================================================================================================================
+Functions: (41:00 - )
+
+#!/bin/bash 
+
+# if we assign a name to a set of data then it is called as a variable 
+# if we assign a name to a set of commands then it is called as a function 
+
+# there are four types of commands, function is one of them 
+## 1. Binaries which are stored in system location like /bin 
+## 2. Functions 
+## 3. Alias     e.g. (alias G="git pull --all")
+## 4. Shell-Builtin
+
+[ root@ip-172-31-34-13 ~/ShellScript_Aug ]# type ls
+ls is aliased to `ls --color=auto'
+[ root@ip-172-31-34-13 ~/ShellScript_Aug ]# which ls
+alias ls='ls --color=auto'
+ /usr/bin/ls
+
+
 
