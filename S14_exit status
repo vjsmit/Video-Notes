@@ -69,7 +69,7 @@ echo -e Hello\\nWorld
 echo  "Cost of apple is \$100"
 
 ==========================================================================================================================
-Functions: (41:00 - )
+Functions: (41:00 - 55:00 )
 
 #!/bin/bash 
 
@@ -137,6 +137,69 @@ sample_local() {
 
 sample_local
 echo "Value of a2 in main program = $a2 "
+================================================================================================================================================
+Conditions: (57:00 - 01:03:00)
+
+action=$1
+## Color Codes 
+R="\e[31m"
+N="\e[0m"
+
+case $action in 
+    start) 
+        echo -e "Starting the service"
+        ;; 
+    stop) 
+        echo -e "Stopping the service"
+        ;;
+    *)
+        echo "Usage:: $0 start|stop"
+        echo -e "\t ${R}start${N} -> Start the service"
+        echo -e "\t ${R}stop${N}  -> Stop the service"
+        exit 1
+        ;;
+esac
+
+============================================================================================================================
+if (01:05:00 - )
+
+#!/bin/bash 
+
+# Simple-If 
+# If-Else 
+# Else-If
+
+## Refer this URL for syntaxes 
+# https://www.geeksforgeeks.org/conditional-statements-shell-script/ 
+
+## Expresssion are categerized in threee 
+# 1. String Operators   = , != , == 
+# Ex : [ a = a ] , [ a != $a ]
+
+## 2. String operators -eq , -ne, -gt, -ge, -le, -lt
+## 3. File operators 
+## Refer: https://www.tutorialspoint.com/unix/unix-file-operators.htm
 
 
+action=$1
+
+if [ "$action" = "start" ]; then 
+    echo "Starting the service"
+elif [ "$action" = "stop" ]; then 
+    echo "Stopping the service"
+else 
+    echo "Usage:: $0 start|stop"
+    echo -e "\t ${R}start${N} -> Start the service"
+    echo -e "\t ${R}stop${N}  -> Stop the service"
+    exit 1
+fi
+
+
+ls -ld /opt /opt1 &>/dev/null 
+if [ $? -eq 0 ]; then 
+    echo "Successful"
+else 
+    echo Failure 
+    exit 2 
+fi 
 
