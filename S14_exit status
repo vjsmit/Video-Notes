@@ -88,5 +88,32 @@ ls is aliased to `ls --color=auto'
 alias ls='ls --color=auto'
  /usr/bin/ls
 
+## Declare a function 
+samplex() {
+    echo Hello 
+    echo Bye
+}
+
+## Call the function 
+samplex 
+
+## Function is a command and hence we can parse the inputs 
+sampley() {
+    echo First Argumnent = $1 
+    echo Second Argument = $2
+}
+
+sampley 10 98 
+
+## Function is a command and hence it has exit status as well , 
+   but we cannot use exit command because it exits the complete script where as for function to come out we use return command 
+   and status is same like exit command ranges from 0-255 
+
+sample_stat() {
+    echo Hello 
+    return 20
+    echo Bye 
+}
+echo "Staus of function = $?"
 
 
