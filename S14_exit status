@@ -114,6 +114,29 @@ sample_stat() {
     return 20
     echo Bye 
 }
-echo "Staus of function = $?"
+echo "Status of function = $?"
+
+## Variables in main program can be accessed by functions and vice-versa
+
+sample_vars() {
+    af=100
+    echo "Value of am=$am"
+}
+
+am=200 
+sample_vars
+echo "Value of af=$af"
+
+
+## Some times we want to limit the variable in function to be accessible only inside function
+
+sample_local() {
+    local a2=100 
+    echo "Value of a2 in function = $a2 "
+}
+
+sample_local
+echo "Value of a2 in main program = $a2 "
+
 
 
