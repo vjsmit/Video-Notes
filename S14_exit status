@@ -33,4 +33,39 @@ exit 5
 ## TO refer the exit status we use a variable ?, TO access a ? variable we use $? 
 
 man command will have more description about the command
+==================================================================================================================
+Quotes:  (29:00 - 40:00)
+
+#!/bin/bash 
+
+echo * 
+
+### Usually keyboard characters other than a-z, 0-9 , _ other than these characters we have more characters like * () and so on are called as special characters . 
+
+## Those special characters are having a special purpose in the system like $ to access a variable 
+
+## Some times this speciual characters need to be avoided and the inputs should be given avoiding their speciality 
+
+# TO do that we have quotes 
+## 1. Single Quotes 
+#        No Special Characters are treated as special in single quotes 
+## 2. Double Quotes 
+#        Only $ , ` are treated a special characters and rest other are normal.
+
+ls -ld /opt /opt1 &>/dev/null 
+echo 'Exit Status of ls command = $?'
+
+ls -ld /opt /opt1 &>/dev/null 
+echo "Exit Status of ls command = $?"
+
+echo "*"
+
+# With out quotes also we can escape special character by using \ 
+echo \*
+
+echo -e Hello\\nWorld
+
+## Even in double quotes sometimes you need to skip the speciality of chaaracters 
+echo  "Cost of apple is \$100"
+
 
