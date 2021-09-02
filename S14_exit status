@@ -1,0 +1,34 @@
+# ls -ld /opt /opt1 >/tmp/out 2>/tmp/err        
+
+        command o/p in /tmp/out
+        error o/p   in /tmp/err
+  
+ To save both command and error in same location:
+ 
+          ls -ld /opt /opt1 &>/tmp/out
+          
+  When we dont want to save o/p and error then we redirect it in /dev/null        
+  
+           ls -ld /opt &>/dev/null
+           
+           
+
+# Any command we execute is going to send the exit status to the shell and from that status we can validate whether the command is sucessfully executed or not.
+
+## Exit status is a number 
+
+# Exit states ranges from 0-255
+
+# 0 is globally successful 
+# 1-255 is a failure or partially failure or partialy successful 
+
+
+# As a author of a your own shell scripts you can use the exit status from 1-125
+# 125+ are used by system and it is not preferred to use by the user.
+
+## You can send your own exit status by using exit command 
+
+exit 5
+
+man command will have more description about the command
+

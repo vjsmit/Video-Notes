@@ -1,8 +1,0 @@
-# ls -ld /opt /opt1 >/tmp/out 2>/tmp/err        
-
-        command o/p in /tmp/out
-        error o/p   in /tmp/err
-  
- To save both command and error in same location:
- 
-          ls -ld /opt /opt1 &>/tmp/out
