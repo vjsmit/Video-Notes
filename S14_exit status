@@ -30,5 +30,7 @@
 
 exit 5
 
+## TO refer the exit status we use a variable ?, TO access a ? variable we use $? 
+
 man command will have more description about the command
 
