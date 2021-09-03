@@ -204,3 +204,5 @@ else
 fi 
 
 
+##Double redirector will append the file and overwrite
+yum install httpd -y &>>$LOG
