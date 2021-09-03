@@ -1,0 +1,2 @@
+echo -n Hi
+##This will print Hi in same line
