@@ -1,2 +1,15 @@
 echo -n Hi
 ##This will print Hi in same line
+
+
+Usual operations we do on a file ( 560 - ):
+1) Modify the existing content
+2) Add lines
+3) Delete lines
+
+Modify: 
+    sed -i -e 's|/bash|/csh|' passwd  ##Here wherever we have /bash it will be replaced by /csh in passwd file
+ To change complete line:
+    sed -i -e '<line#> c <content to add>' <file_name>
+    sed -i -e '1 c SMIT' passwd   ## 1 is the line no. to be changed and SMIT is the content we want 
+    
