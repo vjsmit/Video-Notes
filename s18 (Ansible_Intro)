@@ -17,6 +17,17 @@ Diff bw config mgmt tools (24:45--)
     and pull the confign.
     
  How SSH Works (36:00--45:30)
+      1) Client tried to connect the ip/hostname which we have given.
+      2) Server offers its identity. (fingerprint)
+      3) Client looks for identity locally if not asks you for storing it.
+      4) Client offers local keys (default private keys) by default
+      5) Server accepts the key and looks in authorized keys of user and looks for whether it is allowed to connect or not.
+      6) If keys is accepted then session will be provided to client
+      7) If not, then it looks for password authentication is enabled if enabled then it will ask you the password other wise the session is terminated.
+      8) If password is allowed then it validates the password.
+
+
+
  
  Ansible Installation (45:32--58:00)
    - we usually install ansible on Jumpserver
