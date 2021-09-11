@@ -4,6 +4,9 @@
     - Ansible always first looks for config file locally if it's not there then it will use the cental one
     - To check config file location
         - $ansible --version
+        
+        Some default changes we do on ansible.cfg:
+        
     - We can enable host_key_checking as false in order to disable fingerprint checking. (earlier we were usimg export variable)
     - We can change inventory location from "/etc/ansible/hosts" to "/home/centos/hosts (/root/hosts)". So, we dont have to give "-i hosts". Ansible will oick the host file.
     - We can uncomment remote_user = root. So, we can remove -u root also.
