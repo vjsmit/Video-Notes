@@ -72,7 +72,7 @@ Ansible Ad HOC command (01:16--)
   - u <user_name> and using -k to ask for pwd
   -ansible -i hosts all -u root -k -m shell -a uptime
   
-    
+  >file_name - to empty the file  
     
     
        
