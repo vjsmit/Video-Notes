@@ -32,9 +32,8 @@
           
  (11) Ansible facts (53:00 -- )
         - on remote node we have to create directory /etc/ansible/facts.d.
-        - inside that directory, we have to place one or more fact fies in jason format
-               - :w !sudo tee % > /dev/null (to save the file inside above directory as sudo user) 
-        - ansible_local is the variable      
+        - inside that directory, we have to place one or more fact fies as name.fact in jason format
+        - ansible_local is the variable to access variable located in remote node    
         - so, we can keep the information about the node inside the node also
          
  
