@@ -16,8 +16,9 @@
       - ansible_password: (not a good practice to )
       
 (8) register variables (38:00 --)
+         - We execute the task and store the o/p in one variable
          - to register a variable from o/p of one task and storing that output in a variable
-         - register: var_name
+         - register: var_name   #register is a keyword
          
 (9) Define a variable in a task (45:00 --)
        set_fact:
