@@ -33,6 +33,8 @@
 (5) Filters (33:00 -- 49:00 )
       - $ uptime | xargs -n1 (to view uptime o/p list wise)
       - .split() function we use in ansible/python to split a string to a list. e.g. {{out.stdout.split()}}
+      -  LOAD: "{{out.stdout.split()[-3].split('.')[0]}}"
+       
        
 (6) Email service (50:00 -- 01:08:50)
 
