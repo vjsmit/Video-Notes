@@ -1,4 +1,4 @@
-(1) Privare key (06:00 --)
+(1) Private key (06:00 --)
       - .pem file/ .pub file
       - .pub file we keep in amazon or we can upload it directly on server
       - one key pair is enough for one user.
