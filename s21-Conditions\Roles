@@ -47,7 +47,9 @@
       - Roles expect files to be in certain directory name. Roles must include at least one of these directories, 
         however it is perfectly fine to exclude any which are not being used. 
         When in use, each directory must contain a main.yml file, which contains the relevant content:
-        
+          
+          These are the directories need to be present inside role:
+          
                 tasks - contains the main list of tasks to be executed by the role.
                 handlers - contains handlers, which may be used by this role or even anywhere outside this role.
                 defaults - default variables for the role (low priority variables).
