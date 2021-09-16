@@ -1,14 +1,27 @@
 (1) Print (01:41 -- 07:00)
 (2) Vars (07:00 -- )
+          vars:
+            URL: vars.google.com
+            
 (3) Vars_prompt (18:00)
+               vars_prompt:
+                - prompt: Enter URL
+                  name: URL
+                  private: no
+                  
 (4) How to get variables from files (20:30 --)
-(5) Sometimes we need to pass a variable as an argument i.e. vars from cli (26:00)
+          we keep vars in the file and keep the file in the playbook
+                vars_files:
+                    - 01-file_name.yml
+                    
+(5) Sometimes we need to pass a variable as an argument i.e. vars from cli using (26:00)
      - from cli we need to pass a variable by using -e option
          e.g. $ ansible-playbook playbooks/7-vars-from-cli.yml -e URL=cli.google.com
+         
 (6) Putting vars in inventory files (32:00)
       e.g. [all:vars]
            URL=group.google.com
-     - best practice is to maintain a file
+     - best practice is to maintain a separate file
          group_files->all.yml
          
 (7) Default variables (35:00 --)
@@ -20,21 +33,52 @@
          - to register a variable from o/p of one task and storing that output in a variable
          - register: var_name   #register is a keyword
          
+            tasks:
+              - name: Get uptime
+                shell: uptime
+                register: abc
+
+              - name: Print abc var
+                debug:
+                  msg: "{{abc.stdout}}"
+         
 (9) Define a variable in a task (45:00 --)
        set_fact:
          var_name: "{{}}"
+         
+        tasks:
+         - name: Get Uptime
+           shell: uptime
+           register: OUT
+
+         - name: Define a variable
+           set_fact:
+             UPTIME: "{{OUT.stdout}}"
+
+         - name: Print UPTIME variable
+           debug:
+             msg: "UPTIME = {{UPTIME}}"
          
 (10) Task [Gathering Facts]  (47:00 --)
        - setup module
           - it connect to the node and gather all it's system  information as a variables 
           - e.g. ansible_machine:
+                 ansible_distribution:
+                 ansible_python_version:
           - gather_facts: no ====> then it will not gather facts about the node, By default it is set to yes
           
  (11) Ansible facts (53:00 -- )
         - on remote node we have to create directory /etc/ansible/facts.d.
-        - inside that directory, we have to place one or more fact fies as name.fact in jason format
+        - inside that directory, we have to place one or more fact fies as name.fact in jason format 
+          e.g. { 
+                    "URL" : "node1-fact.google.com"
+               }
         - ansible_local is the variable to access variable located in remote node    
         - so, we can keep the information about the node inside the node also
+        
+        - name: Print facts from node1
+          debug:
+            msg: "{{ansible_local}}"
          
  
 (12) Variable Precedence (59:00)
@@ -69,3 +113,5 @@
         var_name: "{{}}"
         
   (6) Setup
+  
+  7) ansible_local - to access variable from remote node
