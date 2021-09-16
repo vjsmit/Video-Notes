@@ -77,6 +77,9 @@
                 defaults/
                 meta/
                 
+     ## In above e.g.,  we have created role and then created common & webservers (another folder inside it, as a name of role)
+        After this we have pre-defined directories. We then must have main.yml file inside these directories. 
+                
    Modules:
       include_role => will include complete role
       include      => will include play after another play
