@@ -56,7 +56,7 @@
                 templates - contains templates which can be deployed via this role.
                 meta - defines some meta data for this role.
         
-     - Example project structure:
+     - Example Role directory structure:
 
         site.yml
         webservers.yml
