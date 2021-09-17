@@ -1,12 +1,14 @@
 (1) Private key (06:00 --)
       - .pem file/ .pub file
-      - .pub file we keep in amazon or we can upload it directly on server
+      - .pub file we keep in amazon or we can upload it directly on server or to github
       - one key pair is enough for one user.
       - Generate keypair:
          $ ssh-keygen -f devops
            - it will generate two files (1)devops.pub (2)devops
            - devops files we rename to devops.pem by $ mv devops devops.pem
-           - usually we need to load this file with putty and covert the file to PPK in order to connect server with putty
+           - usually we need to load devops.pem file with putty and covert the file to PPK in order to connect server with putty
+             As pem is a global format, and ppk is putty understable format. So, we have to convert it to putty format
+           
       - connecting ubuntu server from git bash
          $ ssh -i devops.pem -l ubuntu <ip address>
          
