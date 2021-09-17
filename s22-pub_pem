@@ -31,7 +31,9 @@
   - Installing WebServer & AppServer (47:00 -- )
   - Jenkins (50:00)
      - jekins server should have ansible installed. 
-     - shell script to install jenkins (54:00)
+     - shell script to install jenkins (54:00) 
+            I created this script:
+                  curl -s https://raw.githubusercontent.com/vjsmit/DevOps/main/Jenkins/Automation.sh | sudo bash
      
   - become: yes (it give sudo privilege)
   - ansible color environment variable (01:24:00)
