@@ -8,11 +8,19 @@
         Some default changes we do on ansible.cfg:
         
     - We can enable host_key_checking as false in order to disable fingerprint checking. (earlier we were usimg export variable)
-    - We can change inventory location from "/etc/ansible/hosts" to "/home/centos/hosts (/root/hosts)". So, we dont have to give "-i hosts". Ansible will oick the host file.
+    - We can change inventory location from "/etc/ansible/hosts" to "/home/centos/hosts (/root/hosts)". So, we dont have to give "-i hosts". Ansible will pick the host file.
     - We can uncomment remote_user = root. So, we can remove -u root also.
     - We can uncomment ask_pass = true. Then no need to give -k option.
     - $ansible -i hosts all -u root -k -m shell -a uptime =======> $ansible all -m shell -a uptime
+    
+   
+    
 (3) YAML(59:00--)
+
+(4)  To push changes from git to sorce tree/VS editor (01:05:40 - )
+        git add -A
+        git commit -m ss
+        git push origin main
 
 Modules:
  #To install webserver
