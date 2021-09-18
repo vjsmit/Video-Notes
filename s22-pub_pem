@@ -34,6 +34,9 @@
      - shell script to install jenkins (54:00) 
             I created this script:
                   curl -s https://raw.githubusercontent.com/vjsmit/DevOps/main/Jenkins/Automation.sh | sudo bash
+                  
+   ## Jenkins user cant access the centOS user home directory files.
+      So, whatever is there in ansible.cfg will work only for WS related setup
      
   - become: yes (it give sudo privilege)
   - ansible color environment variable (01:24:00)
