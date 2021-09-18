@@ -40,10 +40,12 @@
            
       - Unarchive module: this module can download the file and extract also. 
                         : the option needs to be specify is remote_src: yes
-                        : unarchive:
-                            src:
-                            dest:
-                            remote_src: yes
+                       - name: Unarchive a file that needs to be downloaded (added in 2.0)
+                         unarchive:
+                             src: https://example.com/example.zip
+                             dest: /usr/local/bin
+                             remote_src: yes
+
       - become_user: 
         
   (4) Download WAR file & JDBC (40:00)     
