@@ -6,8 +6,8 @@
      
      - Download the default index file
              get_url:
-             url:
-             dest:
+               url:
+               dest:
        
      - Restart service
                service:
