@@ -49,6 +49,9 @@
       - become_user: 
         
   (4) Download WAR file & JDBC (40:00)     
+  
+  Templates: Similar to copy but in this we can replace some variable also while copying
+  
   (5) Context.xml (45:00)
        -Default variables for role: Role default variables allow us to set default variables for included or dependent roles (see below).
                                   : To create defaults, simply add a defaults/main.yml file in your role directory. 
