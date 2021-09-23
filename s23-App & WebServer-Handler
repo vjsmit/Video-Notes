@@ -65,6 +65,7 @@
   (8) pre_reqs (01:01:00 - 01:14:00): sestatus to check SELinux status    
   
   (9)Ubuntu (01:15:00):
+          apt-get update   ##1st command we give to update its own repo
   
   Doubt:
   TOMCAT_VERSION in jenkins (30:00)
