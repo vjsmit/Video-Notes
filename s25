@@ -1,1 +1,17 @@
-Starts from 16:00
+Starts from 16:00 - 42:00 (Web & App server setup)
+
+role dependency & defaults: (45:00 - 59:00)
+
+Ansible Vault (01:00:00 - )
+
+ To encrypt the data available inside our playbooks.  we can encrpt whole playbook or block of code
+ ansible-vault encrypt file_name   ##For encrypting
+ ansible-playbook --ask-vault-pass playbooks/19-VAULT.yml  ## for decrypting the file temporarily
+ 
+ ansible-playbook  --vault-password-file=/tmp/pass playbooks/19-VAULT.yml  ##We place pass file in /tmp/pass location. For automation purpose we can keep it in a file
+ ansible-vault encrypt file_name   ##For decrypting
+ 
+ When need to encrypt only data:
+ 
+ ansible-vault encrypt_string <string>
+   
