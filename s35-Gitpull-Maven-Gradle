@@ -62,3 +62,6 @@ Jenkins (01:07:00 -- )
 
 Doubt:
  (58:00---01:06:00)
+
+To create ansible roles through script (33:00)
+  ansible-galaxy init test-role-1
