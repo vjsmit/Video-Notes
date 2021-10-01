@@ -34,7 +34,7 @@ To go back from one commit to other
  - git checkout <commit id>  (evey commit has commit id)
  
 Merge the code in master
- - git merge ansible
+ - git merge <branch_name>
  
 ===================================================================================================
 Three types of project in java
