@@ -1,7 +1,7 @@
 Docker is to run the container from the images.
 Conatiners provide lots of flexiblity.
 All the images are pre-defined and available at hub.docker.com
-Installing a container:
+Installing a container: (07:00 - )
   from docs.docker.com
 $ docker ps  (It will show all the docker running comtainers)
 $ docker ps -a  (It will show the container which are stopped also)
@@ -18,12 +18,12 @@ If we want to run some service on container, we have to provide image
  $ docker run -p host port:container port container image
  $ docker run -p 80:80 httpd
  80 port is open for container and not for the machine. So, whatever container we run we have to expose to the outside world
- -p otion is to publish the port, 80 port of my host machine to my container port 80.
+ -p otion is to publish the port, map 80 port of my host machine to my container port 80.
     Its like mapping host port no. to my container port no.
     
  $ docker rm -f <container_id>    (to remove the container forcefully)
  
- $ docker exec <Cid> cat <content>  (to get the content inside the container)
+ $ docker exec <Container_id> cat <content>  (to get the content inside the container)
  
  Jenkins admin user create groovy (19:00 - )
  
@@ -34,7 +34,7 @@ If we want to run some service on container, we have to provide image
   - $ docker build -t user_name/image_name:image  - to build the image
   - but the image we created is local. We can use it only in the system
   - $ docker images   - it wil show list of images
-  - since images we built is local we can run the container in local machine
+  - since images we built is local we can only run the container in local machine
   - to use it in central we have to do docker push as well for that we have to login to our dockerhub account
   - $ docker login
   - $ docker push user_name/image_name:image
